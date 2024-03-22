@@ -5,6 +5,9 @@ export const Container = styled.div`
   display: flex;
   height: 12rem;
   border-bottom: solid 1px ${({ theme }) => theme.COLORS.DETAILS_500};
+  justify-content: space-between;
+  padding: 2.8rem 2rem 2.6rem;
+  align-items: center;
 `
 
 export const HomeButton = styled.button`
@@ -22,4 +25,9 @@ export const MenuButton = styled.button`
   color: ${({ theme }) => theme.COLORS.DETAILS_700};
   display: flex;
   gap: .8rem;
+`
+
+export const WhatsAppButton = styled.button`
+  width: 3.2rem;
+  height: 3.2rem;
 `
