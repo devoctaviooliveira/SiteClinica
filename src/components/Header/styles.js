@@ -8,6 +8,20 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 2.8rem 2rem 2.6rem;
   align-items: center;
+  
+  > .ContactButton {
+    display: none;
+  }
+
+  @media (min-width: 833px) and (max-width: 1440px) {
+    .MobileButton {
+      display: none;
+    }
+
+    .ContactButton {
+      display: flex;
+    }
+  }
 `
 
 export const HomeButton = styled.button`
@@ -25,9 +39,26 @@ export const MenuButton = styled.button`
   color: ${({ theme }) => theme.COLORS.DETAILS_700};
   display: flex;
   gap: .8rem;
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
 `
 
 export const WhatsAppButton = styled.button`
   width: 3.2rem;
   height: 3.2rem;
+`
+
+export const Links = styled.div`
+  
+
+
+  @media (max-width: 1440px) {
+    display: none;
+  }
+`
+
+export const Link = styled.button`
+  color: ${({ theme }) => theme.COLORS.DETAILS_700};
 `
