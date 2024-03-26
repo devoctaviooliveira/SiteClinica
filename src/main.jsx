@@ -5,12 +5,13 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/global'
 
 import { Header } from './components/Header/index.jsx'
+import { FacialTreatments } from './pages/Treatments/Facial/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Header />
+      <FacialTreatments />
     </ThemeProvider>
   </React.StrictMode>
 )

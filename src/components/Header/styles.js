@@ -13,7 +13,19 @@ export const Container = styled.div`
     display: none;
   }
 
-  @media (min-width: 833px) and (max-width: 1440px) {
+  @media (min-width: 833px) and (max-width: 1439px) {
+    .MobileButton {
+      display: none;
+    }
+
+    .ContactButton {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 2.8rem 12rem;
+
     .MobileButton {
       display: none;
     }
@@ -35,6 +47,7 @@ export const HomeButton = styled.button`
 export const MenuButton = styled.button`
   font-size: 2rem;
   font-style: normal;
+  font-family: "Roboto Slab";
   font-weight: 700;
   color: ${({ theme }) => theme.COLORS.DETAILS_700};
   display: flex;
@@ -51,8 +64,8 @@ export const WhatsAppButton = styled.button`
 `
 
 export const Links = styled.div`
-  
-
+  display: flex;
+  gap: 4.6rem;
 
   @media (max-width: 1440px) {
     display: none;
@@ -61,4 +74,8 @@ export const Links = styled.div`
 
 export const Link = styled.button`
   color: ${({ theme }) => theme.COLORS.DETAILS_700};
+  font-family: "Roboto Slab";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
 `
