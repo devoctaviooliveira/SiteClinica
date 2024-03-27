@@ -8,12 +8,17 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 2.8rem 2rem 2.6rem;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+
   
   > .ContactButton {
     display: none;
   }
 
-  @media (min-width: 833px) and (max-width: 1439px) {
+  @media (min-width: 832px) and (max-width: 1439px) {
     .MobileButton {
       display: none;
     }
@@ -25,6 +30,7 @@ export const Container = styled.div`
 
   @media (min-width: 1440px) {
     padding: 2.8rem 12rem;
+    
 
     .MobileButton {
       display: none;
@@ -52,6 +58,7 @@ export const MenuButton = styled.button`
   color: ${({ theme }) => theme.COLORS.DETAILS_700};
   display: flex;
   gap: .8rem;
+  align-items: center;
 
   @media (min-width: 1440px) {
     display: none;

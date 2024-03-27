@@ -14,4 +14,9 @@ export const Container = styled.button`
   font-family: 'Roboto Slab', sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
+
+  @media (max-width: 1439px) {
+    font-size: 1.6rem;
+    padding: .6rem 2.2rem;
+  }
 `
