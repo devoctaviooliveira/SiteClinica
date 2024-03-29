@@ -74,7 +74,7 @@ export const Links = styled.div`
   display: flex;
   gap: 4.6rem;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     display: none;
   }
 `

@@ -1,4 +1,5 @@
 import { Header } from '../../../components/Header/index'
+import { Footer } from '../../../components/Footer'
 import HeadingImg from '../../../assets/headingImgMobile.jfif'
 import Img1 from '../../../assets/FacilImgMobile1.jfif'
 import Img2 from '../../../assets/FacilImgMobile2.jfif'
@@ -149,6 +150,8 @@ export function FacialTreatments() {
           <img className='imgContent' src={Img7} alt="Foto de uma mulher realizando um prodecimento facial" />
         </Section>
       </MainContentDesktop>
+
+      <Footer />
     </Container>
   )
 }
