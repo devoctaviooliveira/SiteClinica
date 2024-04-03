@@ -13,7 +13,13 @@ export const Container = styled.div`
   z-index: 2;
   width: 100%;
 
-  
+
+  .desktopLinks {
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
   > .ContactButton {
     display: none;
   }
@@ -60,6 +66,7 @@ export const MenuButton = styled.button`
   gap: .8rem;
   align-items: center;
 
+
   @media (min-width: 1440px) {
     display: none;
   }
@@ -70,19 +77,41 @@ export const WhatsAppButton = styled.button`
   height: 3.2rem;
 `
 
-export const Links = styled.div`
-  display: flex;
-  gap: 4.6rem;
+export const Links = styled.nav`
+  
+  > ul {
+    display: flex;
+    gap: 4.6rem;
+    list-style-type: none;
 
-  @media (max-width: 1439px) {
-    display: none;
+    @media (max-width: 1440px) {
+      flex-direction: column;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 140px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
   }
 `
 
-export const Link = styled.button`
+export const Link = styled.a`
   color: ${({ theme }) => theme.COLORS.DETAILS_700};
   font-family: "Roboto Slab";
   font-size: 2rem;
   font-style: normal;
-  font-weight: 700;
+
+  @media (min-width: 1439px) {
+    color: ${({ theme }) => theme.COLORS.DETAILS_700};
+    font-family: "Roboto Slab";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+`
+
+export const DropDownMenu = styled.div`
+  position: relative;
+  display: inline-block;
+
 `
