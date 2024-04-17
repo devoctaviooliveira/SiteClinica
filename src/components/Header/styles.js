@@ -5,9 +5,9 @@ export const Container = styled.div`
   display: flex;
   height: 12rem;
   border-bottom: solid 1px ${({ theme }) => theme.COLORS.DETAILS_500};
-  justify-content: space-between;
   padding: 2.8rem 2rem 2.6rem;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -20,11 +20,18 @@ export const Container = styled.div`
     }
   }
 
+  .mobileLink {
+    display: flex;
+    padding: .8rem 2rem;
+    font-size: 1.6rem;
+  }
+
   > .ContactButton {
     display: none;
   }
 
   @media (min-width: 832px) and (max-width: 1439px) {
+
     .MobileButton {
       display: none;
     }
@@ -66,6 +73,10 @@ export const MenuButton = styled.button`
   gap: .8rem;
   align-items: center;
 
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 
   @media (min-width: 1440px) {
     display: none;
@@ -77,12 +88,15 @@ export const WhatsAppButton = styled.button`
   height: 3.2rem;
 `
 
-export const Links = styled.nav`
-  
+export const Links = styled.nav`  
   > ul {
     display: flex;
-    gap: 4.6rem;
     list-style-type: none;
+    border-radius: 1rem;
+
+    @media (min-width: 1440px) {
+      gap: 4.6rem;
+    }
 
     @media (max-width: 1440px) {
       flex-direction: column;
@@ -111,7 +125,11 @@ export const Link = styled.a`
 `
 
 export const DropDownMenu = styled.div`
-  position: relative;
-  display: inline-block;
+  
 
+
+
+  @media (min-width: 1439px) {
+    display: none;
+  }
 `

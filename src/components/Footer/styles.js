@@ -10,6 +10,7 @@ export const Container = styled.div`
   text-align: center;
   justify-content: center;
   padding: 1.2rem 0;
+  margin-top: auto;
 
   > p, a {
     font-family: Poppins;

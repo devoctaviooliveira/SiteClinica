@@ -24,7 +24,7 @@ export function Header() {
 
         {openMenu && (
           <Links>
-            <ul>
+            <ul className='mobileLinks'>
               <li><Link className='mobileLink' href=''>Dra Marcella Dias</Link></li>
               <li><Link className='mobileLink' href=''>Tratamentos</Link></li>
               <li><Link className='mobileLink' href=''>Avaliações</Link></li>
@@ -34,8 +34,8 @@ export function Header() {
         )}
       </DropDownMenu>
 
-      <Links className='desktopLinks'>
-        <ul>
+      <Links>
+        <ul className='desktopLinks'>
           <li><Link className='desktopLink' href=''>Dra Marcella Dias</Link></li>
           <li><Link className='desktopLink' href=''>Tratamentos</Link></li>
           <li><Link className='desktopLink' href=''>Avaliações</Link></li>
