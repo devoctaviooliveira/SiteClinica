@@ -1,24 +1,29 @@
-import { Header } from '../../components/Header/index'
+import { HomepageHeader } from '../../components/HomepageHeader'
 import { Footer } from '../../components/Footer/index'
-import MobileImg from '../../assets/HomepageMobileImg.png' 
+import HomepageImg from '../../assets/HomepageImg.png'
 import { ContactButton } from '../../components/ContactButton'
 import { InstagramButton } from '../../components/InstagramButton'
 
-import { Container, MobileButtons } from './styles'
+import { Container, MobileButtons, MainContent, Filter } from './styles'
 
 export function Homepage() {
   return (
     <Container>
-      <Header />
-      <h1>Dra. Marcella Dias</h1>
-      <img src={MobileImg} alt="Foto da Dra. Marcella Dias" />
+      <Filter />
+      <HomepageHeader />
 
-      <MobileButtons>
-        <ContactButton className='Buttons'/>
-        <InstagramButton className='Buttons'/>
-      </MobileButtons>
+      <MainContent>
+        <h1>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
 
-      <Footer className="Footer"/>
+        
+        <MobileButtons>
+          <ContactButton className='Buttons'/>
+          <InstagramButton className='Buttons'/>
+        </MobileButtons>
+      </MainContent>
+
+      <img className='HomepageImg' src={HomepageImg} alt="Foto da Dra. Marcella Dias" />
+      <Footer className='Footer'/>
     </Container>
   )
 }
