@@ -6,26 +6,6 @@ export const Container = styled.div`
   flex-direction: column;
   z-index: 1;
 
-  > .HomepageImg {
-    z-index: -2;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-
-    @media (min-width: 768px) and (max-width: 1439px) {
-      width: 78%;
-    }
-
-    @media (min-width: 1439px) {
-      position: absolute;
-      bottom: 8rem;
-      width: 52rem;
-      left: 26rem;
-    }
-  }
 
   > .Footer {
     @media (max-width: 1439px) {
@@ -65,7 +45,7 @@ export const MainContent = styled.div`
   align-items: center;
   margin-top: 14.8rem;
 
-  > h1 {
+  > .Mobile_h1 {
     font-size: 3.6rem;
     color: ${({ theme }) => theme.COLORS.DETAILS_500};
     font-family: 'Arual';
@@ -77,23 +57,79 @@ export const MainContent = styled.div`
     }
 
     @media (min-width: 1440px) {
-      font-size: 6rem;
-      color: ${({ theme }) => theme.COLORS.DETAILS_700};
+      display: none;
     }
-  }
-
-  > p {
-    color: white;
-    font-size: 1.4rem;
   }
 
   > .LogoEscrito {
     width: 44rem;
   }
-  
-  > img {
-    width: 22rem;
-    margin-top: 3.2rem;
+
+
+  > .HomepageImg {
+    z-index: -2;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      width: 78%;
+    }
+
+    @media (min-width: 1439px) {
+      position: absolute;
+      bottom: 8rem;
+      height: 100%;
+      width: auto;
+      padding-top: 20rem;
+      left: 32rem;
+    }
+  }
+`
+
+export const DesktopContent = styled.div`
+  padding-left: 57.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+
+  .Desktop_h1 {
+    font-family: 'Arual';
+    font-weight: 100;
+    font-size: calc(5.8rem + 1vw);
+    color: ${({ theme }) => theme.COLORS.DETAILS_700};
+
+    > span {
+      display: inline-block;
+      transform: rotate(180deg);
+      vertical-align: -.2rem;
+    }
+  }
+
+  > h2 {
+    font-family: 'Espera';
+    font-size: calc(2.8rem + 1vw);
+    color: #112C55;
+  }
+
+  > p {
+    font-size: calc(1.6rem + 1vw);
+    color: #112C55;
+    font-family: 'Espera';
+  }
+
+  .Desktop_button {
+    width: 26rem;
+    height: 4.8rem;
+    justify-content: center;
+  }
+
+  @media (max-width:1439px) {
+    display: none;
   }
 `
 

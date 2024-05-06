@@ -4,7 +4,7 @@ import HomepageImg from '../../assets/HomepageImg.png'
 import { ContactButton } from '../../components/ContactButton'
 import { InstagramButton } from '../../components/InstagramButton'
 
-import { Container, MobileButtons, MainContent, Filter } from './styles'
+import { Container, MobileButtons, MainContent, DesktopContent, Filter } from './styles'
 
 export function Homepage() {
   return (
@@ -13,16 +13,23 @@ export function Homepage() {
       <HomepageHeader />
 
       <MainContent>
-        <h1>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
+        <h1 className='Mobile_h1'>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
+
+        <DesktopContent>
+          <h1 className='Desktop_h1'>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
+          <h2>Fisioterapeuta especialista <br />em Dermatofuncional</h2>
+          <p>E eu vou cuidar da saúde da sua pele, cabelos e unhas.</p>
+          <ContactButton className='Desktop_button'/>
+        </DesktopContent>
 
         
         <MobileButtons>
           <ContactButton className='Buttons'/>
           <InstagramButton className='Buttons'/>
         </MobileButtons>
+        <img className='HomepageImg' src={HomepageImg} alt="Foto da Dra. Marcella Dias" />
       </MainContent>
 
-      <img className='HomepageImg' src={HomepageImg} alt="Foto da Dra. Marcella Dias" />
       <Footer className='Footer'/>
     </Container>
   )
