@@ -3,9 +3,10 @@ import logoHeader from '../../assets/logoHeader.png'
 import whatsappHeader from '../../assets/whatsappHeader.svg'
 import { ContactButton } from '../ContactButton/index.jsx'
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 
-import { Container, HomeButton, MenuButton, WhatsAppButton, Links, Link, DropDownMenu } from "./styles";
+import { Container, HomeButton, MenuButton, WhatsAppButton, Links, DropDownMenu } from "./styles";
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false)
@@ -13,7 +14,7 @@ export function Header() {
   return (
     <Container>
       <HomeButton>
-        <img src={logoHeader} alt="Logotipo que está no cabeçalho da página" />
+        <Link className='HomepageLink' to="/"><img src={logoHeader} alt="Logotipo que está no cabeçalho da página" /></Link>
       </HomeButton>
 
       <DropDownMenu>
@@ -25,10 +26,10 @@ export function Header() {
         {openMenu && (
           <Links>
             <ul className='mobileLinks'>
-              <li><Link className='mobileLink' href=''>Dra Marcella Dias</Link></li>
-              <li><Link className='mobileLink' href=''>Tratamentos</Link></li>
-              <li><Link className='mobileLink' href=''>Avaliações</Link></li>
-              <li><Link className='mobileLink' href=''>Localização</Link></li>
+              <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
+              <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
+              <Link className='LayoutLink' to="/about">Avaliações</Link>
+              <Link className='LayoutLink' to="/about">Localização</Link>
             </ul>
           </Links>
         )}
@@ -36,10 +37,10 @@ export function Header() {
 
       <Links>
         <ul className='desktopLinks'>
-          <li><Link className='desktopLink' href=''>Dra Marcella Dias</Link></li>
-          <li><Link className='desktopLink' href=''>Tratamentos</Link></li>
-          <li><Link className='desktopLink' href=''>Avaliações</Link></li>
-          <li><Link className='desktopLink' href=''>Localização</Link></li>
+          <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
+          <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
+          <Link className='LayoutLink' to="/about">Avaliações</Link>
+          <Link className='LayoutLink' to="/about">Localização</Link>
         </ul>
       </Links>
 
@@ -47,7 +48,7 @@ export function Header() {
         <img src={whatsappHeader} alt="Logotipo do whatsapp" />
       </WhatsAppButton>
       
-      <ContactButton className="ContactButton"/>
+      <a href="https://web.whatsapp.com/send?phone=551299107-0987" target='_blank'><ContactButton className="ContactButton"/></a>
     </Container>
   )
 }

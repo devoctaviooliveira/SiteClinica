@@ -85,6 +85,7 @@ export const Section = styled.div`
   > h1 {
     font-size: 2.4rem;
     text-align: center;
+    color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
 
     @media (min-width: 832px) {
       font-size: 3.2rem;
@@ -102,6 +103,7 @@ export const Section = styled.div`
     font-family: Poppins;
     font-size: 1.6rem;
     text-align: justify;
+    color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
   }
 `
 
@@ -130,12 +132,14 @@ export const MainContentDesktop = styled.div`
       font-size: 3.2rem;
       margin-bottom: 2.4rem;
       text-align: center;
+      color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
     }
 
     > p {
       font-family: Poppins;
       font-size: 1.6rem;
       text-align: justify;
+      color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
     }
   }
 

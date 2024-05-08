@@ -4,8 +4,10 @@ import InstagramLogo from '../../assets/InstagramLogo.svg'
 export function InstagramButton({className}) {
   return (
     <Container className={className}>
-      Instagram
-      <img src={InstagramLogo} alt="Logotipo do Instagram" />
+      <a href="https://www.instagram.com/dra.marcelladias/" target='_blank'>
+        Instagram
+        <img src={InstagramLogo} alt="Logotipo do Instagram" />
+      </a>
     </Container>
   )
 }

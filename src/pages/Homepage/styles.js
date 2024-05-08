@@ -28,12 +28,6 @@ export const MobileButtons = styled.div`
   gap: 1rem;
   margin-top: 40rem;
 
-  > .Buttons {
-    width: 28rem;
-    height: 4.8rem;
-    justify-content: center;
-  }
-
   @media (min-width: 1440px) {
     display: none;
   }
@@ -95,6 +89,7 @@ export const DesktopContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: auto;
 
 
   .Desktop_h1 {
@@ -113,12 +108,12 @@ export const DesktopContent = styled.div`
   > h2 {
     font-family: 'Espera';
     font-size: calc(2.8rem + 1vw);
-    color: #112C55;
+    color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
   }
 
   > p {
     font-size: calc(1.6rem + 1vw);
-    color: #112C55;
+    color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
     font-family: 'Espera';
   }
 

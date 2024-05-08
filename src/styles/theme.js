@@ -33,6 +33,8 @@ export default {
     NEUTRAL_800: "#111921",
     NEUTRAL_900: "#0d1319",
 
+    TEXT_STANDARD:"#112C55",
+
     DANGER_50: "#f1e6e6",
     DANGER_100: "#d3b0b0",
     DANGER_200: "#be8a8a",

@@ -2,9 +2,9 @@ import { Menu } from 'lucide-react';
 import logoHeader from '../../assets/logoHeader.png'
 import { ContactButton } from '../ContactButton/index.jsx'
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
-
-import { Container, HomeButton, MenuButton, Links, Link, DropDownMenu } from "./styles.js";
+import { Container, HomeButton, MenuButton, Links, DropDownMenu } from "./styles.js";
 
 export function HomepageHeader() {
   const [openMenu, setOpenMenu] = useState(false)
@@ -12,7 +12,7 @@ export function HomepageHeader() {
   return (
     <Container>
       <HomeButton>
-        <img src={logoHeader} alt="Logotipo que está no cabeçalho da página" />
+        <Link className='HomepageLink' to="/"><img src={logoHeader} alt="Logotipo que está no cabeçalho da página" /></Link>
       </HomeButton>
 
       <DropDownMenu>
@@ -24,10 +24,10 @@ export function HomepageHeader() {
         {openMenu && (
           <Links>
             <ul className='mobileLinks'>
-              <li><Link className='mobileLink' href=''>Dra Marcella Dias</Link></li>
-              <li><Link className='mobileLink' href=''>Tratamentos</Link></li>
-              <li><Link className='mobileLink' href=''>Avaliações</Link></li>
-              <li><Link className='mobileLink' href=''>Localização</Link></li>
+              <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
+              <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
+              <Link className='LayoutLink' to="/about">Avaliações</Link>
+              <Link className='LayoutLink' to="/about">Localização</Link>
             </ul>
           </Links>
         )}
@@ -35,10 +35,10 @@ export function HomepageHeader() {
 
       <Links>
         <ul className='desktopLinks'>
-          <li><Link className='desktopLink' href=''>Dra Marcella Dias</Link></li>
-          <li><Link className='desktopLink' href=''>Tratamentos</Link></li>
-          <li><Link className='desktopLink' href=''>Avaliações</Link></li>
-          <li><Link className='desktopLink' href=''>Localização</Link></li>
+          <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
+          <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
+          <Link className='LayoutLink' to="/about">Avaliações</Link>
+          <Link className='LayoutLink' to="/about">Localização</Link>
         </ul>
       </Links>
       

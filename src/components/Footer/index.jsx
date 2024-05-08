@@ -5,7 +5,7 @@ export function Footer({className}) {
     <Container className={className}>
       <p>Fisioterapia Dermatofuncional e Estética Integrada</p>
       <p>São José dos Campos - SP</p>
-      <a href="">@dra.marcelladias</a>
+      <a href="https://www.instagram.com/dra.marcelladias/" target="_blank">@dra.marcelladias</a>
     </Container>
   )
 }

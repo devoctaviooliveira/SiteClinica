@@ -49,10 +49,12 @@ export const Container = styled.div`
 `
 
 export const HomeButton = styled.button`
-  display: flex;
-  
-  > img {
-    width: 8rem;
+  .HomepageLink {
+    display: flex;
+    
+    > img {
+      width: 8rem;
+    }
   }
 `
 
@@ -81,6 +83,13 @@ export const Links = styled.nav`
     list-style-type: none;
     border-radius: 1rem;
 
+    .LayoutLink {
+      color: ${({ theme }) => theme.COLORS.DETAILS_700};
+      font-family: "Roboto Slab";
+      font-size: 2rem;
+      font-style: normal;
+    }
+
     @media (min-width: 1440px) {
       gap: 4.6rem;
     }
@@ -93,21 +102,14 @@ export const Links = styled.nav`
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
-  }
-`
 
-export const Link = styled.a`
-  color: ${({ theme }) => theme.COLORS.DETAILS_700};
-  font-family: "Roboto Slab";
-  font-size: 2rem;
-  font-style: normal;
-
-  @media (min-width: 1439px) {
-    color: ${({ theme }) => theme.COLORS.DETAILS_700};
-    font-family: "Roboto Slab";
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
+    @media (min-width: 1439px) {
+      color: ${({ theme }) => theme.COLORS.DETAILS_700};
+      font-family: "Roboto Slab";
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+    }
   }
 `
 
