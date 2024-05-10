@@ -9,7 +9,7 @@ export function CardList({position}) {
   return (
     <>
       {position !== undefined ? <Card name={itemToShow.name} comment={itemToShow.comment}/> : arrayDeObjetos.map((objeto) => (
-        <Card name={objeto.name} comment={objeto.comment}/>
+        <Card name={objeto.name} comment={objeto.comment} />
       ))}
     </>
   );

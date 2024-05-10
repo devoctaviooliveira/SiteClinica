@@ -41,6 +41,14 @@ export const Header = styled.div`
     width: 4.4rem;
     height: 4.4rem;
   }
+
+  > .googleLogo {
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
 `
 
 export const TextContent = styled.div`
