@@ -32,9 +32,6 @@ export const Container = styled.div`
 
   @media (min-width: 832px) and (max-width: 1439px) {
 
-    .MobileButton {
-      display: none;
-    }
 
     .ContactButton {
       display: flex;
@@ -44,10 +41,6 @@ export const Container = styled.div`
   @media (min-width: 1440px) {
     padding: 2.8rem 12rem;
     
-
-    .MobileButton {
-      display: none;
-    }
 
     .ContactButton {
       display: flex;
@@ -70,14 +63,13 @@ export const MenuButton = styled.button`
   font-style: normal;
   font-family: "Roboto Slab";
   font-weight: 700;
-  color: ${({ theme }) => theme.COLORS.DETAILS_700};
+  color: ${({ theme }) => theme.COLORS.DETAILS_500};
   display: flex;
   gap: .8rem;
   align-items: center;
-
   position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 2rem;
+  top: 4.2rem;
 
 
   @media (min-width: 1440px) {
@@ -85,10 +77,7 @@ export const MenuButton = styled.button`
   }
 `
 
-export const WhatsAppButton = styled.button`
-  width: 3.2rem;
-  height: 3.2rem;
-`
+
 
 export const Links = styled.nav`  
   > ul {
@@ -127,11 +116,11 @@ export const Links = styled.nav`
 `
 
 export const DropDownMenu = styled.div`
-  
+  position: fixed;
+  top: 7rem;
+  right: 14rem;
 
-
-
-  @media (min-width: 1439px) {
+  @media (min-width: 1440px) {
     display: none;
   }
 `

@@ -12,19 +12,13 @@ export const Container = styled.div`
   justify-content: space-between;
 
 
-
-
   .desktopLinks {
     @media (max-width: 1439px) {
       display: none;
     }
   }
 
-  .mobileLink {
-    display: flex;
-    padding: .8rem 2rem;
-    font-size: 1.6rem;
-  }
+  
 
   > .ContactButton {
     display: none;
@@ -78,6 +72,9 @@ export const MenuButton = styled.button`
 `
 
 export const Links = styled.nav`  
+
+  
+
   > ul {
     display: flex;
     list-style-type: none;
@@ -88,6 +85,11 @@ export const Links = styled.nav`
       font-family: "Roboto Slab";
       font-size: 2rem;
       font-style: normal;
+
+      @media (max-width: 832px) {
+        font-size: 1.6rem;
+        padding: .8rem;
+      }
     }
 
     @media (min-width: 1440px) {
@@ -121,4 +123,7 @@ export const DropDownMenu = styled.div`
   @media (min-width: 1440px) {
     display: none;
   }
+
+  
+  
 `

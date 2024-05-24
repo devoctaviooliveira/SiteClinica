@@ -26,7 +26,7 @@ export function HomepageHeader() {
             <ul className='mobileLinks'>
               <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
               <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
-              <Link className='LayoutLink' to="/about">Avaliações</Link>
+              <Link className='LayoutLink' to="/avaliacoes">Avaliações</Link>
               <Link className='LayoutLink' to="/about">Localização</Link>
             </ul>
           </Links>
@@ -37,7 +37,7 @@ export function HomepageHeader() {
         <ul className='desktopLinks'>
           <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
           <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
-          <Link className='LayoutLink' to="/about">Avaliações</Link>
+          <Link className='LayoutLink' to="/avaliacoes">Avaliações</Link>
           <Link className='LayoutLink' to="/about">Localização</Link>
         </ul>
       </Links>

@@ -16,6 +16,10 @@ export const Container = styled.button`
     font-weight: bold;
     font-size: 1.8rem;
 
+    @media (max-width: 832px) {
+      display: none;
+    }
+
     @media (max-width: 1439px) {
       width: 28rem;
       height: 4.8rem;

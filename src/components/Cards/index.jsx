@@ -1,7 +1,7 @@
 import { Container, MainContent, HeaderContent, TextContent , Header} from "./styles";
 import profile from '../../assets/profile.png'
 import stars from '../../assets/stars.png'
-import googleLogo from '../../assets/googleLogo.png'
+import googleLogo from '../../assets/googleLogo.svg'
 
 
 export function Card({name, comment}) {
@@ -9,12 +9,12 @@ export function Card({name, comment}) {
     <Container>
       <MainContent>
         <Header>
-          <img src={googleLogo} className="googleLogo" alt="logotipo do google" />
           <img src={profile} alt="ícone representando perfil de usuário" />
           <HeaderContent>
             <p>{name}</p>
             <img className="stars" src={stars} alt="ícones de estrelas douradas" />
           </HeaderContent>
+          <img src={googleLogo} className="googleLogo" alt="logotipo do google" />
         </Header> 
         
         <TextContent>
