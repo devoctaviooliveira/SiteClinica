@@ -1,29 +1,24 @@
 import styled from 'styled-components'
 
-
 export const Container = styled.div`
-  @media (max-width: 832px) {
-    display: flex;
-  }
 
-  .MobileSwiper {
-    display: flex;
+  .feedbackImg {
+    border-radius: 2rem;
 
-    .swiper-pagination-bullet-active {
-      background-color: ${({ theme }) => theme.COLORS.DETAILS_500};
-    }
-
-    @media (min-width: 832px) {
-      display: none;
-    }
   }
 
   .DesktopSwiper {
-    max-width: 36rem;
+    max-width: 35rem;
 
     @media (max-width: 832px) {
       display: none;
     }
+  }
+
+  .SwiperSlide {
+    display: flex;
+    border-radius: 2rem;
+    
   }
 
   .swiper-slide {

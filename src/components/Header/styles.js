@@ -26,8 +26,10 @@ export const Container = styled.div`
     font-size: 1.6rem;
   }
 
-  > .ContactButton {
-    display: none;
+  > a {
+    @media (max-width: 832px) {
+      display: none;
+    }
   }
 
   @media (min-width: 832px) and (max-width: 1439px) {

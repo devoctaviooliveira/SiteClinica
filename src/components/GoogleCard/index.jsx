@@ -2,9 +2,9 @@ import { Container, Card } from "./styles";
 import stars from '../../assets/stars.png'
 import googleLogo from '../../assets/googleLogo.svg'
 
-export function GoogleCard() {
+export function GoogleCard({className}) {
   return (
-    <Container>
+    <Container className={className}>
       <Card>
         <img src={googleLogo} className="GoogleLogo" alt="" />
         <span>

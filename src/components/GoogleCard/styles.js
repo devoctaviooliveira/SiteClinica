@@ -14,12 +14,10 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
 
-
   .GoogleLogo {
     width: 4rem;
     height: 4rem;
   }
-
 
   > span {
     display: flex;
