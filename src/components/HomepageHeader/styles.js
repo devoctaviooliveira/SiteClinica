@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
   display: flex;
@@ -13,26 +14,23 @@ export const Container = styled.div`
 
 
   .desktopLinks {
-    @media (max-width: 1439px) {
+    @media ${breakpoints.desktop_only} {
       display: none;
     }
   }
-
-  
 
   > .ContactButton {
     display: none;
   }
 
-  @media (min-width: 832px) and (max-width: 1439px) {
-
+  @media ${breakpoints.tablet_up} {
     .ContactButton {
       display: none;
     }
   }
 
-  @media (min-width: 1440px) {
-    padding: 2.8rem 12rem;
+  @media ${breakpoints.desktop_up} {
+    padding: 2.8rem 8rem;
     border-bottom: solid 1px ${({ theme }) => theme.COLORS.DETAILS_500};
     background-color: white;
 
@@ -65,16 +63,12 @@ export const MenuButton = styled.button`
   right: 2rem;
   top: 4.2rem;
 
-
-  @media (min-width: 1440px) {
+  @media ${breakpoints.desktop_up} {
     display: none;
   }
 `
 
 export const Links = styled.nav`  
-
-  
-
   > ul {
     display: flex;
     list-style-type: none;
@@ -86,17 +80,17 @@ export const Links = styled.nav`
       font-size: 2rem;
       font-style: normal;
 
-      @media (max-width: 832px) {
+      @media ${breakpoints.tablet_only} {
         font-size: 1.6rem;
         padding: .8rem;
       }
     }
 
-    @media (min-width: 1440px) {
+    @media ${breakpoints.desktop_up} {
       gap: 4.6rem;
     }
 
-    @media (max-width: 1439px) {
+    @media ${breakpoints.desktop_only} {
       flex-direction: column;
       position: absolute;
       background-color: #f9f9f9;
@@ -105,7 +99,7 @@ export const Links = styled.nav`
       z-index: 1;
     }
 
-    @media (min-width: 1439px) {
+    @media ${breakpoints.desktop_up} {
       color: ${({ theme }) => theme.COLORS.DETAILS_700};
       font-family: "Roboto Slab";
       font-size: 2rem;
@@ -120,10 +114,7 @@ export const DropDownMenu = styled.div`
   top: 7rem;
   right: 14rem;
 
-  @media (min-width: 1440px) {
+  @media ${breakpoints.desktop_up} {
     display: none;
-  }
-
-  
-  
+  }  
 `

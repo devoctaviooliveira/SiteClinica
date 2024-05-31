@@ -11,10 +11,9 @@ export function Homepage() {
     <Container>
       <Filter />
       <HomepageHeader />
-
+      
       <MainContent>
         <h1 className='Mobile_h1'>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
-
         <MobileButtons>
           <ContactButton className='Buttons'/>
           <InstagramButton className='Buttons'/>

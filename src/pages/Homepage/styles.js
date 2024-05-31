@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
   height: 100vh;
@@ -8,7 +9,7 @@ export const Container = styled.div`
 
 
   > .Footer {
-    @media (max-width: 1439px) {
+    @media ${breakpoints.desktop_only} {
       display: none;
     }
   }
@@ -26,9 +27,10 @@ export const MobileButtons = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 40rem;
+  position: absolute;
+  bottom: 6rem;
 
-  @media (min-width: 1440px) {
+  @media ${breakpoints.desktop_up} {
     display: none;
   }
 `
@@ -37,20 +39,22 @@ export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 14.8rem;
+  
 
   > .Mobile_h1 {
     font-size: 3.6rem;
     color: ${({ theme }) => theme.COLORS.DETAILS_500};
     font-family: 'Arual';
     font-weight: 100;
+    position: relative;
+    top: 14.6rem;
 
     > span {
       display: inline-block;
       transform: rotate(180deg);      
     }
 
-    @media (min-width: 1440px) {
+    @media ${breakpoints.desktop_up} {
       display: none;
     }
   }
@@ -58,7 +62,6 @@ export const MainContent = styled.div`
   > .LogoEscrito {
     width: 44rem;
   }
-
 
   > .HomepageImg {
     z-index: -2;
@@ -69,11 +72,11 @@ export const MainContent = styled.div`
     left: 50%;
     transform: translate(-50%);
 
-    @media (min-width: 768px) and (max-width: 1439px) {
+    @media ${breakpoints.tablet_up} {
       width: 78%;
     }
 
-    @media (min-width: 1439px) {
+    @media ${breakpoints.desktop_up} {
       position: absolute;
       bottom: 8rem;
       height: 100%;
@@ -97,6 +100,7 @@ export const DesktopContent = styled.div`
     font-weight: 100;
     font-size: calc(5.8rem + 1vw);
     color: ${({ theme }) => theme.COLORS.DETAILS_700};
+    margin-top: 14.8rem;
 
     > span {
       display: inline-block;
@@ -123,7 +127,7 @@ export const DesktopContent = styled.div`
     justify-content: center;
   }
 
-  @media (max-width:1439px) {
+  @media ${breakpoints.desktop_only} {
     display: none;
   }
 `
@@ -139,7 +143,7 @@ export const Filter = styled.div`
   pointer-events: none;
   z-index: -1;
 
-  @media (min-width: 1440px) {
+  @media ${breakpoints.desktop_up} {
     display: none;
   }
 `

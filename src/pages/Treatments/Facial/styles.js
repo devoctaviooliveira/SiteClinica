@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../../styles/breakpoints'
 
 export const Container = styled.div`
   height: 100vh;
@@ -14,10 +15,9 @@ export const Heading = styled.div`
   top: 12rem;
   margin-bottom: 12rem;
 
-  @media (min-width: 1439px) {
+  @media ${breakpoints.desktop_up} {
     height: 20rem;
   }
-
 
   > h1 {
     font-family: "Roboto Slab";
@@ -30,16 +30,16 @@ export const Heading = styled.div`
     text-shadow: -1px 0 ${({ theme }) => theme.COLORS.DETAILS_700}, 0 1px ${({ theme }) => theme.COLORS.DETAILS_700}, 
     1px 0 ${({ theme }) => theme.COLORS.DETAILS_700}, 0 -1px ${({ theme }) => theme.COLORS.DETAILS_700};
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.tablet_up} {
       font-size: 3.6rem;
     }
 
-    @media (min-width: 1439px) {
+    @media ${breakpoints.desktop_up} {
       font-size: 4.8rem;
     }
   }
 
-  @media (max-width: 832px) {
+  @media ${breakpoints.tablet_only} {
     h1 span::before,
     h1 span::after {
       content: '';
@@ -54,24 +54,23 @@ export const Heading = styled.div`
     object-fit: cover;
     position: absolute;
 
-
-    @media (min-width: 1439px) {
+    @media ${breakpoints.desktop_up} {
       height: 20rem;
     }
   }
 `
 
 export const MainContent = styled.div`
-  padding: 3.6rem 2rem;
+  padding: 3.6rem 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 
-  @media (min-width: 832px) {
-    padding: 3.6rem 16rem;
+  @media ${breakpoints.tablet_up} {
+    padding: 3.6rem 2.6rem;
   }
 
-  @media (min-width: 1440px) {
+  @media ${breakpoints.desktop_up} {
     display: none;
   }
 `
@@ -87,7 +86,7 @@ export const Section = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.tablet_up} {
       font-size: 3.2rem;
     }
   }
@@ -111,9 +110,9 @@ export const MainContentDesktop = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  padding: 3.2rem 12rem;
+  padding: 3.2rem 4rem;
 
-  @media (max-width: 1439px) {
+  @media ${breakpoints.desktop_only} {
     display: none;
   }
 
