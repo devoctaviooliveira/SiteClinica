@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
   height: 100vh;
@@ -20,7 +21,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.DETAILS_700};
     font-size: 2.4rem;
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.tablet_up} {
       font-size: 4.2rem;
     }
   }
@@ -41,7 +42,7 @@ export const MobileContent = styled.div`
     font-size: 1.6rem;
   }
 
-  @media (min-width: 1440px) {
+  @media ${breakpoints.desktop_up} {
     display: none;
     flex-direction: row;
   }
@@ -54,7 +55,7 @@ export const DesktopContent = styled.div`
   padding: 0 12rem;
   flex-grow: 1;
 
-  @media (max-width: 1439px) {
+  @media ${breakpoints.desktop_only} {
     display: none;
   }
 `

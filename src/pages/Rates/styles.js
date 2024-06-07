@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
   height: 100vh;
@@ -24,7 +24,7 @@ export const MainContent = styled.div`
     display: flex;
     margin: auto;
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.tablet_up} {
       display: none;
     }
   }
@@ -39,7 +39,7 @@ export const GoogleContent = styled.div`
     display: flex;
     justify-content: center;
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.tablet_up} {
       display: none;
     }
   }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.button`
   a {
@@ -16,7 +16,7 @@ export const Container = styled.button`
     font-weight: bold;
     font-size: 1.8rem;
 
-    @media (max-width: 1439px) {
+    @media ${breakpoints.desktop_only} {
       width: 28rem;
       height: 4.8rem;
       justify-content: center;

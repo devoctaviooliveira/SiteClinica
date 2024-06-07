@@ -1,16 +1,16 @@
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
 
   .feedbackImg {
     border-radius: 2rem;
-
   }
 
   .DesktopSwiper {
     max-width: 35rem;
 
-    @media (max-width: 832px) {
+    @media ${breakpoints.desktop_only} {
       display: none;
     }
   }
@@ -18,7 +18,6 @@ export const Container = styled.div`
   .SwiperSlide {
     display: flex;
     border-radius: 2rem;
-    
   }
 
   .swiper-slide {

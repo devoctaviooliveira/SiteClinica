@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 
 export const Container = styled.div`
@@ -7,7 +8,7 @@ export const Container = styled.div`
   display: flex;
   padding: 1rem;
 
-  @media (max-width: 832px) {
+  @media ${breakpoints.desktop_only} {
     max-width: 100%;
     height: 100%;
     border-radius: 2rem;
@@ -20,7 +21,7 @@ export const MainContent = styled.div`
   gap: 1.6rem;
   flex-direction: column;
 
-  @media (max-width: 832px) {
+  @media ${breakpoints.desktop_only} {
     padding: 1rem 3.6rem;
     justify-content: center;
   }
@@ -29,7 +30,6 @@ export const HeaderContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: .8rem;
-
 
   > p {
     font-size: 1.6rem;
@@ -46,7 +46,6 @@ export const Header = styled.div`
   display: flex;
   gap: .8rem;
 
-
   > img {
     width: 4.4rem;
     height: 4.4rem;
@@ -58,7 +57,7 @@ export const Header = styled.div`
     width: 3.4rem;
     height: 3.4rem;
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.tablet_up} {
       width: 2.4rem;
       height: 2.4rem;
       position: absolute;
@@ -74,14 +73,12 @@ export const TextContent = styled.div`
 
   color: #112C55;
   font-family: "Roboto Slab";
-  font-size: 16px;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
 
-  @media (max-width: 832px) {
-    font-size: 1.6rem;
-    font-weight: 700;
+  @media ${breakpoints.tablet_only} {
     text-align: justify;
   }
 `

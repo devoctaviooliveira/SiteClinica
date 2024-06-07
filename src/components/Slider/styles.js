@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
-  @media (max-width: 832px) {
+  @media ${breakpoints.desktop_only} {
     display: flex;
   }
 
@@ -13,7 +13,7 @@ export const Container = styled.div`
       background-color: ${({ theme }) => theme.COLORS.DETAILS_500};
     }
 
-    @media (min-width: 832px) {
+    @media ${breakpoints.desktop_up} {
       display: none;
     }
   }
@@ -21,7 +21,7 @@ export const Container = styled.div`
   .DesktopSwiper {
     max-width: 36rem;
 
-    @media (max-width: 832px) {
+    @media ${breakpoints.desktop_only} {
       display: none;
     }
   }
