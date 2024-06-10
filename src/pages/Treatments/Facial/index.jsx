@@ -17,7 +17,7 @@ export function FacialTreatments() {
       <Header />
       <Heading>
         <img src={HeadingImg} alt="Imagem de uma mulher realizando um procedimento facial" />
-        <h1>ESTÉTICA FACIAL <span>E</span> HARMONIZAÇÃO</h1>
+        <h1>TRATAMENTOS</h1>
       </Heading>
 
       <MainContent>

@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   z-index: 1;
 
-
   > .Footer {
     @media ${breakpoints.desktop_only} {
       display: none;
