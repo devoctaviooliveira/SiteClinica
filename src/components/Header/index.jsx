@@ -28,7 +28,7 @@ export function Header() {
               <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
               <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
               <Link className='LayoutLink' to="/avaliacoes">Avaliações</Link>
-              <Link className='LayoutLink' to="/location">Localização</Link>
+              <Link className='LayoutLink' to="/localizacao">Localização</Link>
             </ul>
           </Links>
         )}
@@ -39,7 +39,7 @@ export function Header() {
           <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
           <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
           <Link className='LayoutLink' to="/avaliacoes">Avaliações</Link>
-          <Link className='LayoutLink' to="/about">Localização</Link>
+          <Link className='LayoutLink' to="/localizacao">Localização</Link>
         </ul>
       </Links>
 

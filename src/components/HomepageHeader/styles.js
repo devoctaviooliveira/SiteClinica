@@ -80,7 +80,7 @@ export const Links = styled.nav`
       font-size: 2rem;
       font-style: normal;
 
-      @media ${breakpoints.tablet_only} {
+      @media ${breakpoints.desktop_only} {
         font-size: 1.6rem;
         padding: .8rem;
       }

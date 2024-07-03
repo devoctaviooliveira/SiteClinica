@@ -1,13 +1,27 @@
 import { Menu } from 'lucide-react';
 import logoHeader from '../../assets/logoHeader.png'
 import { ContactButton } from '../ContactButton/index.jsx'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 import { Container, HomeButton, MenuButton, Links, DropDownMenu } from "./styles.js";
 
 export function HomepageHeader() {
   const [openMenu, setOpenMenu] = useState(false)
+  const menuRef = useRef()
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setOpenMenu(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+        document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <Container>
@@ -15,7 +29,7 @@ export function HomepageHeader() {
         <Link className='HomepageLink' to="/"><img src={logoHeader} alt="Logotipo que está no cabeçalho da página" /></Link>
       </HomeButton>
 
-      <DropDownMenu>
+      <DropDownMenu ref={menuRef}>
         <MenuButton onClick={() => setOpenMenu(!openMenu)}>
           MENU
           <Menu />
@@ -27,7 +41,7 @@ export function HomepageHeader() {
               <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
               <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
               <Link className='LayoutLink' to="/avaliacoes">Avaliações</Link>
-              <Link className='LayoutLink' to="/about">Localização</Link>
+              <Link className='LayoutLink' to="/localizacao">Localização</Link>
             </ul>
           </Links>
         )}
@@ -38,7 +52,7 @@ export function HomepageHeader() {
           <Link className='LayoutLink' to="/about">Dra. Marcella Dias</Link>
           <Link className='LayoutLink' to="/tratamentosfaciais">Tratamentos</Link>
           <Link className='LayoutLink' to="/avaliacoes">Avaliações</Link>
-          <Link className='LayoutLink' to="/about">Localização</Link>
+          <Link className='LayoutLink' to="/localizacao">Localização</Link>
         </ul>
       </Links>
       

@@ -52,7 +52,7 @@ export const DesktopContent = styled.div`
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
-  padding: 0 12rem;
+  padding: 0 8rem;
   flex-grow: 1;
 
   @media ${breakpoints.desktop_only} {
@@ -61,15 +61,17 @@ export const DesktopContent = styled.div`
 `
 
 export const FirstHalf = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 14rem;
+  position: fixed;
+  padding-top: 12rem;
+  z-index: -1;
 `
 
 export const SecondHalf = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;  
+  gap: 1.2rem;  
+  padding-left: 42rem;
+  justify-content: center;
 
   h1 {
     display: flex;

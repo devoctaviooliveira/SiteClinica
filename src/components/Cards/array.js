@@ -37,7 +37,7 @@ export const arrayDeObjetos = [
     comment: 'Realizei o procedimento de botox com a Dra Marcella e AMEI o resultado! Além de ter a mão leve, não tive qualquer intercorrência após o procedimento. Ficou super natura, do jeito que eu queria. Simplesmente amei o resultado.'
   },
   {
-    name: 'AMANDA SOBRINHO SANTOS',
+    name: 'Amanda Sobrinho Santos',
     comment: 'Ótimo atendimento, a Dr. Marcella é super atenciosa, explica com detalhes como será o procedimento. Tive um ótimo resultado!! Super recomendooo!!!'
   },
   {

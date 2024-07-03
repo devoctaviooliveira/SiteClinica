@@ -23,20 +23,19 @@ const router = createBrowserRouter([
   {
     path: "avaliacoes",
     element: <Rates />
+  },
+  {
+    path: "localizacao",
+    element: <Location />
   }
 ])
 
-import { Header } from './components/Header/index.jsx'
+
 import { FacialTreatments } from './pages/Treatments/Facial/index.jsx'
-import { Footer } from './components/Footer/index.jsx'
 import { About } from './pages/About/index.jsx'
 import { Homepage } from './pages/Homepage/index.jsx'
-import { Slider } from './components/Slider/index.jsx'
-import { CardList } from './components/Cards/cardList.jsx'
-import { Card } from './components/Cards/index.jsx'
-import { GoogleCard } from './components/GoogleCard/index.jsx'
 import { Rates } from './pages/Rates/index.jsx'
-
+import { Location } from './pages/Location/index.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

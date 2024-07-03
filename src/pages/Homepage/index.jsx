@@ -13,7 +13,7 @@ export function Homepage() {
       <HomepageHeader />
       
       <MainContent>
-        <h1 className='Mobile_h1'>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
+        <h1 className='Mobile_h1'>DRA MARCELLA DIAS</h1>
         <MobileButtons>
           <ContactButton className='Buttons'/>
           <InstagramButton className='Buttons'/>
@@ -22,7 +22,7 @@ export function Homepage() {
       </MainContent>
 
       <DesktopContent>
-        <h1 className='Desktop_h1'>DR<span>V</span>. M<span>V</span>RCELL<span>V</span> DI<span>V</span>S</h1>
+        <h1 className='Desktop_h1'>DRA MARCELLA DIAS</h1>
         <h2>Fisioterapeuta especialista <br />em Dermatofuncional</h2>
         <p>E eu vou cuidar da saúde da sua pele, cabelos e unhas.</p>
         <ContactButton className='Desktop_button'/>

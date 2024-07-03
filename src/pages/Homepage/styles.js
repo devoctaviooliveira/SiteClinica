@@ -5,7 +5,11 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  width: 100%;
+
+  @media ${breakpoints.tablet_only} {
+    position: fixed;
+  }
 
   > .Footer {
     @media ${breakpoints.desktop_only} {
@@ -27,7 +31,7 @@ export const MobileButtons = styled.div`
   flex-direction: column;
   gap: 1rem;
   position: absolute;
-  bottom: 6rem;
+  bottom: 12rem;
 
   @media ${breakpoints.desktop_up} {
     display: none;
@@ -43,15 +47,10 @@ export const MainContent = styled.div`
   > .Mobile_h1 {
     font-size: 3.6rem;
     color: ${({ theme }) => theme.COLORS.DETAILS_500};
-    font-family: 'Arual';
-    font-weight: 100;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
     position: relative;
     top: 14.6rem;
-
-    > span {
-      display: inline-block;
-      transform: rotate(180deg);      
-    }
 
     @media ${breakpoints.desktop_up} {
       display: none;
@@ -66,8 +65,7 @@ export const MainContent = styled.div`
     z-index: -2;
     width: 100%;
     bottom: 0;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
     left: 50%;
     transform: translate(-50%);
 
@@ -95,8 +93,8 @@ export const DesktopContent = styled.div`
 
 
   .Desktop_h1 {
-    font-family: 'Arual';
-    font-weight: 100;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
     font-size: calc(5.8rem + 1vw);
     color: ${({ theme }) => theme.COLORS.DETAILS_700};
     margin-top: 14.8rem;
@@ -133,14 +131,12 @@ export const DesktopContent = styled.div`
 
 export const Filter = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: #040406;
   opacity: 66%;
   pointer-events: none;
-  z-index: -1;
+
 
   @media ${breakpoints.desktop_up} {
     display: none;

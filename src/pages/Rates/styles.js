@@ -89,7 +89,7 @@ export const Images = styled.div`
     }
 
     .img2 {
-      width: 22rem;
+      width: 26rem;
       position: absolute;
       right: 14%;
       z-index: 2;
