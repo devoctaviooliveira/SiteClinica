@@ -15,6 +15,21 @@ export const Container = styled.div`
     @media ${breakpoints.desktop_only} {
       display: none;
     }
+
+    @media ${breakpoints.desktop_up} {
+      @keyframes slide-in-bot {
+        from {
+          transform: translateY(var(--startY));
+        }
+      }
+
+      --startY: 100%;
+      animation: slide-in-bot 1s;
+
+      .ContactButton {
+        display: flex;
+      }
+    }
   }
 
   @font-face {
@@ -36,6 +51,7 @@ export const MobileButtons = styled.div`
   @media ${breakpoints.desktop_up} {
     display: none;
   }
+
 `
 
 export const MainContent = styled.div`
@@ -80,6 +96,22 @@ export const MainContent = styled.div`
       width: auto;
       padding-top: 20rem;
       left: 32rem;
+
+      
+      -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+      @keyframes slide-in-left {
+        0% {
+          -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
   }
 `
@@ -90,6 +122,10 @@ export const DesktopContent = styled.div`
   flex-direction: column;
   gap: 2rem;
   margin: auto;
+
+
+  -webkit-animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 
   .Desktop_h1 {

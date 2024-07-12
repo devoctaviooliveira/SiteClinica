@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import breakpoints from '../../../styles/breakpoints'
 
+
 export const Container = styled.div`
   height: 100vh;
 `
@@ -36,6 +37,34 @@ export const Heading = styled.div`
 
     @media ${breakpoints.desktop_up} {
       font-size: 4.8rem;
+
+      -webkit-animation: fade-in-fwd 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: fade-in-fwd 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+      @-webkit-keyframes fade-in-fwd {
+        0% {
+          -webkit-transform: translateZ(-80px);
+          transform: translateZ(-80px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in-fwd {
+        0% {
+          -webkit-transform: translateZ(-80px);
+          transform: translateZ(-80px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -56,6 +85,26 @@ export const Heading = styled.div`
 
     @media ${breakpoints.desktop_up} {
       height: 20rem;
+
+      -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+      @-webkit-keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
   }
 `
@@ -149,5 +198,71 @@ export const MainContentDesktop = styled.div`
 
   .textContentReverse {
     order: 2;
+  }
+
+  .textContent, .imgContent {
+    @media ${breakpoints.desktop_up} {
+      -webkit-animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+      @-webkit-keyframes fade-in-left {
+        0% {
+          -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes fade-in-left {
+        0% {
+          -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .textContentReverse, .imgContentReverse {
+    @media ${breakpoints.desktop_up} {
+      -webkit-animation: fade-in-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: fade-in-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+      @-webkit-keyframes fade-in-right {
+        0% {
+          -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes fade-in-right {
+        0% {
+          -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
   }
 `

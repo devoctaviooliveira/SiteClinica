@@ -12,7 +12,6 @@ export const Container = styled.div`
   width: 100%;
   justify-content: space-between;
 
-
   .desktopLinks {
     @media ${breakpoints.desktop_only} {
       display: none;
@@ -33,6 +32,15 @@ export const Container = styled.div`
     padding: 2.8rem 8rem;
     border-bottom: solid 1px ${({ theme }) => theme.COLORS.DETAILS_500};
     background-color: white;
+
+    @keyframes slide-in-top {
+      from {
+        transform: translateY(var(--startY));
+      }
+    }
+
+    --startY: -100%;
+    animation: slide-in-top 1s;
 
     .ContactButton {
       display: flex;
@@ -88,6 +96,29 @@ export const Links = styled.nav`
 
     @media ${breakpoints.desktop_up} {
       gap: 4.6rem;
+
+      a {
+        position: relative;
+      }
+
+      a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: ${({ theme }) => theme.COLORS.DETAILS_500};
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+
+      a:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
     }
 
     @media ${breakpoints.desktop_only} {

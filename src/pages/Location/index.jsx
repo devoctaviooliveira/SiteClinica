@@ -1,6 +1,5 @@
 import { Header } from "../../components/Header"
 import { Footer } from '../../components/Footer/index'
-import { Pin } from 'lucide-react';
 import pin from '../../assets/pin.svg'
 import { GoogleMap } from "../../components/GoogleMap";
 
