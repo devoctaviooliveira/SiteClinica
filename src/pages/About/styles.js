@@ -22,7 +22,7 @@ export const Container = styled.div`
     font-size: 2.4rem;
 
     @media ${breakpoints.tablet_up} {
-      font-size: 4.2rem;
+      font-size: 3.6rem;
     }
   }
 `
@@ -79,16 +79,21 @@ export const DesktopContent = styled.div`
 `
 
 export const FirstHalf = styled.div`
-  position: fixed;
-  padding-top: 12rem;
-  z-index: -1;
+  .DesktopImg {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    padding-top: 12rem;
+    z-index: -1;
+  }
 `
 
 export const SecondHalf = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;  
-  padding-left: 42rem;
+  gap: 1.2rem;
+  padding-left: 38rem;
   justify-content: center;
   
   -webkit-animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

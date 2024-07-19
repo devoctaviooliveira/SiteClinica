@@ -1,11 +1,12 @@
 import { Header } from '../../../components/Header/index'
 import { Footer } from '../../../components/Footer'
 import HeadingImg from '../../../assets/headingImgMobile.jfif'
+import Img0 from '../../../assets/FacilImgMobile0.jfif'
 import Img1 from '../../../assets/FacilImgMobile1.jfif'
-import Img2 from '../../../assets/FacilImgMobile2.jfif'
+import Img2 from '../../../assets/FacilImgMobile2.jpg'
 import Img3 from '../../../assets/FacilImgMobile3.jfif'
 import Img4 from '../../../assets/FacilImgMobile4.jfif'
-import Img5 from '../../../assets/FacilImgMobile5.png'
+import Img5 from '../../../assets/FacilImgMobile5.jfif'
 import Img6 from '../../../assets/FacilImgMobile6.jfif'
 import Img7 from '../../../assets/FacilImgMobile7.jfif'
 
@@ -21,6 +22,14 @@ export function FacialTreatments() {
       </Heading>
 
       <MainContent>
+        <Section>
+          <h1>PÓS-OPERATÓRIO</h1>
+          <img src={Img0} alt="Foto de uma mulher realizando um prodecimento facial" />
+          <p>A fisioterapia especializada no pós-operatório de cirurgia plástica desempenha um papel crucial na recuperação dos pacientes, que visa acelerar o processo de cicatrização, minimizar inchaços e hematomas, e prevenir complicações como fibroses e aderências. 
+          Técnicas de drenagem linfática manual, exercícios específicos e recursos como laser, ultrassom terapêutico, taping e radiofrequência são empregados para melhorar a circulação sanguínea e linfática, promover a reabsorção de líquidos, reduzir a dor e o edema, além de prevenir e tratar complicações. A intervenção precoce do fisioterapeuta ajuda a garantir resultados estéticos mais satisfatórios e uma recuperação mais rápida e confortável para o paciente. 
+          </p>
+        </Section>
+
         <Section>
           <h1>TOXINA BOTULÍNICA</h1>
           <img src={Img1} alt="Foto de uma mulher realizando um prodecimento facial" />
@@ -73,6 +82,17 @@ export function FacialTreatments() {
       </MainContent>
 
       <MainContentDesktop>
+        <Section className='desktopSection'>
+          <div className='textContentReverse'>
+            <h1>PÓS-OPERATÓRIO</h1>
+            <p>A fisioterapia especializada no pós-operatório de cirurgia plástica desempenha um papel crucial na recuperação dos pacientes, que visa acelerar o processo de cicatrização, minimizar inchaços e hematomas, e prevenir complicações como fibroses e aderências. 
+            Técnicas de drenagem linfática manual, exercícios específicos e recursos como laser, ultrassom terapêutico, taping e radiofrequência são empregados para melhorar a circulação sanguínea e linfática, promover a reabsorção de líquidos, reduzir a dor e o edema, além de prevenir e tratar complicações. A intervenção precoce do fisioterapeuta ajuda a garantir resultados estéticos mais satisfatórios e uma recuperação mais rápida e confortável para o paciente. 
+            </p>
+          </div>
+
+          <img className='imgContentReverse' src={Img0} alt="Foto de uma mulher realizando um prodecimento facial" />
+        </Section>
+
         <Section className='desktopSection'>
           <div className='textContent'>
             <h1>TOXINA BOTULÍNICA</h1>

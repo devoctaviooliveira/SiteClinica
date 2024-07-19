@@ -18,7 +18,7 @@ export function Card({name, comment}) {
         </Header> 
         
         <TextContent>
-          <p>{comment}</p>
+          <div className="text-overlay">{comment}</div>
         </TextContent>
       </MainContent>
     </Container>

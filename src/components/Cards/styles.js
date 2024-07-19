@@ -6,12 +6,43 @@ export const Container = styled.div`
   max-width: 36rem;
   background-color: white;
   display: flex;
-  padding: 1rem;
+  padding: 1rem 2rem;
 
   @media ${breakpoints.desktop_only} {
     max-width: 100%;
     height: 100%;
     border-radius: 2rem;
+  }
+
+
+  @media ${breakpoints.desktop_up} {
+    -webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    @-webkit-keyframes flip-in-hor-bottom {
+      0% {
+        -webkit-transform: rotateX(80deg);
+        transform: rotateX(80deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes flip-in-hor-bottom {
+      0% {
+        -webkit-transform: rotateX(80deg);
+        transform: rotateX(80deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        opacity: 1;
+      }
+    }
   }
 `
 
@@ -77,6 +108,7 @@ export const TextContent = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+
 
   @media ${breakpoints.tablet_only} {
     text-align: justify;

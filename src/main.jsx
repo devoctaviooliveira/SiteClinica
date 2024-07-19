@@ -36,6 +36,7 @@ import { About } from './pages/About/index.jsx'
 import { Homepage } from './pages/Homepage/index.jsx'
 import { Rates } from './pages/Rates/index.jsx'
 import { Location } from './pages/Location/index.jsx'
+import { AutoSlider } from './components/AutoSlider/index.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -46,4 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </ThemeProvider>
   </React.StrictMode>
 )
+
+//
+
 

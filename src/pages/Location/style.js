@@ -33,12 +33,32 @@ export const TextContent = styled.div`
     > p, a {
       font-size: 1.6rem;
       font-family: Poppins;
+      font-weight: bold;
       line-height: 120%;
       color: ${({ theme }) => theme.COLORS.DETAILS_700};
     }
 
-    a:hover {
-      font-weight: bold;
+    a {
+      position: relative;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: ${({ theme }) => theme.COLORS.DETAILS_500};
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+
+    a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
     }
   }
 `

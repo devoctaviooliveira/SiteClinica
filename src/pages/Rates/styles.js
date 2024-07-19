@@ -26,7 +26,9 @@ export const Container = styled.div`
 export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  justify-content: space-between;
+  padding: 2rem 8%;
+
 
   @media ${breakpoints.desktop_up} {
     flex-direction: row;
@@ -57,8 +59,7 @@ export const GoogleContent = styled.div`
   }
 
   @media ${breakpoints.desktop_up} {
-    padding-top: 10rem;
-    padding-left: 14%;
+    padding-top: 4rem;
   }
 
   > .GoogleCard {
@@ -72,35 +73,9 @@ export const GoogleContent = styled.div`
   }
 `
 
-export const Images = styled.div`
-  padding-left: 20rem;
+export const SecondSlider = styled.div`
 
   @media ${breakpoints.desktop_only} {
-      display: none;
-    }
-
-  @media ${breakpoints.desktop_up} {
-    .img3 {
-      width: 32rem;
-      position: absolute;
-      right: 26%;
-      top: 24rem;
-      z-index: 1;
-    }
-
-    .img2 {
-      width: 26rem;
-      position: absolute;
-      right: 14%;
-      z-index: 2;
-    }
-
-    .img1 {
-      width: 28rem;
-      position: absolute;
-      right: 14%;
-      top: 48rem;
-      z-index: 0;
-    }
+    display: none;
   }
 `
