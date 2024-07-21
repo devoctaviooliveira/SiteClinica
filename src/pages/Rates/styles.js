@@ -16,10 +16,46 @@ export const Container = styled.div`
     @media ${breakpoints.mobile_up} {
       font-size: 3.6rem;
     }
+
+    @media ${breakpoints.desktop_up} {
+      padding-top: 12rem;
+    }
+
+    @media ${breakpoints.desktop_up} {
+      -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
   }
 
   .Footer {
     z-index: 3;
+  }
+
+
+  @-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 `
 
@@ -27,8 +63,11 @@ export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 8%;
-
+  padding: 1rem 8%;
+  
+  @media ${breakpoints.desktop_only} {
+    gap: 1rem;
+  }
 
   @media ${breakpoints.desktop_up} {
     flex-direction: row;
@@ -39,9 +78,7 @@ export const MainContent = styled.div`
     margin: auto;
     margin-bottom: 1.6rem;
 
-    @media ${breakpoints.mobile_up} {
-      margin-top: 8rem;
-    }
+    
 
     @media ${breakpoints.desktop_up} {
       display: none;
@@ -61,21 +98,11 @@ export const GoogleContent = styled.div`
   @media ${breakpoints.desktop_up} {
     padding-top: 4rem;
   }
-
-  > .GoogleCard {
-    display: flex;
-    justify-content: center;
-    margin-top: 1.6rem;
-
-    @media ${breakpoints.desktop_up} {
-      display: none;
-    }
-  }
 `
 
 export const SecondSlider = styled.div`
 
   @media ${breakpoints.desktop_only} {
-    display: none;
+    
   }
 `

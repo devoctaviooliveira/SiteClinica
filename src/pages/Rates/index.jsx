@@ -15,14 +15,14 @@ export function Rates() {
 
       <MainContent>
         <GoogleContent>
-          <GoogleCard className='GoogleCard'/>
           <Slider />
         </GoogleContent>
-        <ContactButton className='ContactButton'/>
         
         <SecondSlider>
           <AutoSlider></AutoSlider>
         </SecondSlider>
+        
+        <ContactButton className='ContactButton'/>
       </MainContent>
       <Footer className='Footer'/>
     </Container>

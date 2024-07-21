@@ -4,8 +4,6 @@ import pin from '../../assets/pin.svg'
 import { GoogleMap } from "../../components/GoogleMap";
 
 
-
-
 import { Container, MainContent, TextContent } from "./style";
 
 export function Location() {

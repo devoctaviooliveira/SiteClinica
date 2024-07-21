@@ -6,7 +6,7 @@ export const Container = styled.div`
   max-width: 36rem;
   background-color: white;
   display: flex;
-  padding: 1rem 2rem;
+  
 
   @media ${breakpoints.desktop_only} {
     max-width: 100%;
@@ -16,6 +16,9 @@ export const Container = styled.div`
 
 
   @media ${breakpoints.desktop_up} {
+    padding: 1rem 2rem;
+
+
     -webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	  animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 

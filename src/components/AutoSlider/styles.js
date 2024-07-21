@@ -5,16 +5,16 @@ export const Container = styled.div`
   
   .swiper {
     height: 100%;
-    width: 66rem;
+    width: 36rem;
     padding: 1rem;
+
+    @media ${breakpoints.tablet_up} {
+      width: 66rem;
+    }
 
     @media (min-width: 1680px) {
       width: 100rem;
     }
-
-    
-    
-
 
     @-webkit-keyframes slide-in-top {
       0% {
@@ -43,17 +43,17 @@ export const Container = styled.div`
     }
 
     @media ${breakpoints.desktop_up} {
-      -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.6s both;
+      animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.6s both;
   
       .img2 {
-        -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+        -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
+        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
       }
   
       .img4 {
-        -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+        -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.8s both;
+        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.8s both;
       }
     }
 

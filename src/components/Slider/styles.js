@@ -56,8 +56,8 @@ export const Container = styled.div`
 
 
   @media ${breakpoints.desktop_up} {
-    -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 
     @-webkit-keyframes slide-in-top {
       0% {

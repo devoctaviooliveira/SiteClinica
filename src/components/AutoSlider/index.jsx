@@ -13,7 +13,7 @@ export function AutoSlider() {
   return (
     <Container>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={1}
         spaceBetween={16}
         autoplay={{
           delay: 3500,
@@ -23,6 +23,9 @@ export function AutoSlider() {
         modules={[Autoplay]}
         className="mySwiper"
         breakpoints={{
+          700: {
+            slidesPerView: 2
+          },
           1680: {
             slidesPerView: 3,
           },
