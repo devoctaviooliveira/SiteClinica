@@ -18,7 +18,7 @@ export const Container = styled.div`
     }
 
     @media ${breakpoints.desktop_up} {
-      padding-top: 12rem;
+      padding-top: 14rem;
     }
 
     @media ${breakpoints.desktop_up} {

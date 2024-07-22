@@ -1,7 +1,7 @@
 import { Menu } from 'lucide-react';
 import logoHeader from '../../assets/logoHeader.png'
 import { ContactButton } from '../ContactButton/index.jsx'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 
@@ -9,6 +9,20 @@ import { Container, HomeButton, MenuButton, Links, DropDownMenu } from "./styles
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false)
+  const menuRef = useRef()
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setOpenMenu(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+        document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <Container>
@@ -16,7 +30,7 @@ export function Header() {
         <Link className='HomepageLink' to="/"><img src={logoHeader} alt="Logotipo que está no cabeçalho da página" /></Link>
       </HomeButton>
 
-      <DropDownMenu>
+      <DropDownMenu ref={menuRef}>
         <MenuButton onClick={() => setOpenMenu(!openMenu)}>
           MENU
           <Menu />
