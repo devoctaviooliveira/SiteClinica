@@ -23,7 +23,7 @@ export function Homepage() {
 
       <DesktopContent>
         <h1 className='Desktop_h1'>DRA MARCELLA DIAS</h1>
-        <h2>Fisioterapeuta especialista <br />em Dermatofuncional</h2>
+        <h2>Pós operatórios <span>|</span> Harmonização facial</h2>
         <p>Eu desperto a sua melhor versão e te entrego<br />beleza natural, elegante e sem exageros.</p>
         <ContactButton className='Desktop_button'/>
       </DesktopContent>

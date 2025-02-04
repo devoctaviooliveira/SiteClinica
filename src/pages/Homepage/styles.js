@@ -143,6 +143,10 @@ export const DesktopContent = styled.div`
   }
 
   > h2 {
+    > span {
+      font-weight: lighter;
+    }
+
     font-family: 'Espera';
     font-size: calc(2.8rem + 1vw);
     color: ${({ theme }) => theme.COLORS.TEXT_STANDARD};
